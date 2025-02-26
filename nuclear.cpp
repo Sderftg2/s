@@ -18,7 +18,7 @@
 #define PAYLOAD_SIZE 1400
 const int EXPIRY_DAY = 2;
 const int EXPIRY_MONTH = 12;
-const int EXPIRY_YEAR = 2024;
+const int EXPIRY_YEAR = 2030;
 const int DEFAULT_THREAD_COUNT = 800;
 
 std::mutex log_mutex;
